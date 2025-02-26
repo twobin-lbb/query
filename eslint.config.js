@@ -3,10 +3,12 @@
 // @ts-ignore Needed due to moduleResolution Node vs Bundler
 import { tanstackConfig } from '@tanstack/config/eslint'
 import pluginCspell from '@cspell/eslint-plugin'
+import erasableSyntaxOnly from 'eslint-plugin-erasable-syntax-only'
 import vitest from '@vitest/eslint-plugin'
 
 export default [
   ...tanstackConfig,
+  erasableSyntaxOnly.configs.recommended,
   {
     name: 'tanstack/temp',
     plugins: {

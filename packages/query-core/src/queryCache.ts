@@ -92,6 +92,7 @@ export interface QueryStore {
 export class QueryCache extends Subscribable<QueryCacheListener> {
   #queries: QueryStore
 
+  // eslint-disable-next-line erasable-syntax-only/parameter-properties
   constructor(public config: QueryCacheConfig = {}) {
     super()
     this.#queries = new Map<string, Query>()

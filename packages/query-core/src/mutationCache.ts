@@ -86,6 +86,7 @@ export class MutationCache extends Subscribable<MutationCacheListener> {
   #scopes: Map<string, Array<Mutation<any, any, any, any>>>
   #mutationId: number
 
+  // eslint-disable-next-line erasable-syntax-only/parameter-properties
   constructor(public config: MutationCacheConfig = {}) {
     super()
     this.#mutations = new Set()

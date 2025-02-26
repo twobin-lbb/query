@@ -2,6 +2,7 @@ import type { Query } from '@tanstack/query-core'
 
 type SortFn = (a: Query, b: Query) => number
 
+// eslint-disable-next-line erasable-syntax-only/enums
 enum QueryState {
   Fetching = 0,
   Fresh,

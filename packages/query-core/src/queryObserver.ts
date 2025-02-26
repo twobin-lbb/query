@@ -73,6 +73,7 @@ export class QueryObserver<
 
   constructor(
     client: QueryClient,
+    // eslint-disable-next-line erasable-syntax-only/parameter-properties
     public options: QueryObserverOptions<
       TQueryFnData,
       TError,
