@@ -57,9 +57,9 @@
   ],
   "dependencies": {
     "@tanstack/query-core": "workspace:*",
-    "broadcast-channel": "^7.0.0"
+    "broadcast-channel": "^7.1.0"
   },
   "devDependencies": {
-    "npm-run-all2": "^5.0.0"
+    "npm-run-all2": "^5.0.2"
   }
 }
