@@ -33,7 +33,7 @@ import fg from 'fast-glob'
 import { readFileSync, writeFileSync } from 'node:fs'
 
 // Define the pattern to match all generated markdown files
-const markdownFilesPattern = '**/reference/**/*.md'
+const markdownFilesPattern = 'docs/framework/*/reference/**/*.md'
 
 // Find all markdown files matching the pattern
 const markdownFiles = await fg(markdownFilesPattern)
@@ -43,8 +43,13 @@ console.log(`Found ${markdownFiles.length} markdown files to process\n`)
 // Process each markdown file
 markdownFiles.forEach(file => {
   const content = readFileSync(file, 'utf-8')
-  let updatedContent = content.replace(/\]\(\.\//gm, '](../')
-  updatedContent = updatedContent.replace(/\]\(\.\.\//gm, '](../../')
+  let updatedContent = content
+  updatedContent = updatedContent.replaceAll(/\]\(\.\.\//gm, '](../../')
+  // updatedContent = content.replaceAll(/\]\(\.\//gm, '](../')
+  updatedContent = updatedContent.replaceAll(
+    /\]\((?!https?:\/\/|\/\/|\/|\.\/|\.\.\/|#)([^)]+)\)/gm,
+    (match, p1) => `](../${p1})`
+  )
 
   // Write the updated content back to the file
   if (updatedContent !== content) {
