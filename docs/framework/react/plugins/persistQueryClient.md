@@ -7,8 +7,8 @@ This is set of utilities for interacting with "persisters" which save your query
 
 ## Build Persisters
 
-- [createSyncStoragePersister](./createSyncStoragePersister.md)
-- [createAsyncStoragePersister](./createAsyncStoragePersister.md)
+- [createSyncStoragePersister](../createSyncStoragePersister.md)
+- [createAsyncStoragePersister](../createAsyncStoragePersister.md)
 - [create a custom persister](#persisters)
 
 ## How It Works

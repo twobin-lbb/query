@@ -480,7 +480,7 @@ if (queryInfo.data) {
 }
 ```
 
-Here, we are only changing how the UI looks when the mutation is running instead of writing data directly to the cache. This works best if we only have one place where we need to show the optimistic update. For more details, have a look at the [optimistic updates documentation](./optimistic-updates.md).
+Here, we are only changing how the UI looks when the mutation is running instead of writing data directly to the cache. This works best if we only have one place where we need to show the optimistic update. For more details, have a look at the [optimistic updates documentation](../optimistic-updates.md).
 
 ### Limited, Infinite Queries with new maxPages option
 
@@ -494,7 +494,7 @@ Note that the infinite list must be bi-directional, which requires both `getNext
 
 ### Infinite Queries can prefetch multiple pages
 
-Infinite Queries can be prefetched like regular Queries. Per default, only the first page of the Query will be prefetched and will be stored under the given QueryKey. If you want to prefetch more than one page, you can use the `pages` option. Read the [prefetching guide](./prefetching.md) for more information.
+Infinite Queries can be prefetched like regular Queries. Per default, only the first page of the Query will be prefetched and will be stored under the given QueryKey. If you want to prefetch more than one page, you can use the `pages` option. Read the [prefetching guide](../prefetching.md) for more information.
 
 ### New `combine` option for `useQueries`
 
@@ -524,6 +524,6 @@ const { data: post } = useSuspenseQuery({
 
 The experimental `suspense: boolean` flag on the query hooks has been removed.
 
-You can read more about them in the [suspense docs](./suspense.md).
+You can read more about them in the [suspense docs](../suspense.md).
 
 [//]: # 'FrameworkSpecificNewFeatures'
