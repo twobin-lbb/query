@@ -15,7 +15,8 @@ function isRelativeLink(link: string) {
     !link.startsWith('http://') &&
     !link.startsWith('https://') &&
     !link.startsWith('//') &&
-    !link.startsWith('#')
+    !link.startsWith('#') &&
+    !link.startsWith('mailto:')
   )
 }
 

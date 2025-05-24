@@ -242,7 +242,7 @@ The filter defaults to `all`, and you can choose to only match `active` or `inac
 
 #### refetchActive / refetchInactive
 
-[queryClient.invalidateQueries](../../../reference/QueryClient.md#queryclientinvalidatequeries) had two additional, similar flags:
+[queryClient.invalidateQueries](../../../../reference/QueryClient.md#queryclientinvalidatequeries) had two additional, similar flags:
 
 ```
 refetchActive: Boolean
@@ -280,7 +280,7 @@ React.useEffect(() => mySideEffectHere(data), [data])
 
 ### `persistQueryClient` and the corresponding persister plugins are no longer experimental and have been renamed
 
-The plugins `createWebStoragePersistor` and `createAsyncStoragePersistor` have been renamed to [`createSyncStoragePersister`](../plugins/createSyncStoragePersister.md) and [`createAsyncStoragePersister`](../plugins/createAsyncStoragePersister.md) respectively. The interface `Persistor` in `persistQueryClient` has also been renamed to `Persister`. Checkout [this stackexchange](https://english.stackexchange.com/questions/206893/persister-or-persistor) for the motivation of this change.
+The plugins `createWebStoragePersistor` and `createAsyncStoragePersistor` have been renamed to [`createSyncStoragePersister`](../../plugins/createSyncStoragePersister.md) and [`createAsyncStoragePersister`](../../plugins/createAsyncStoragePersister.md) respectively. The interface `Persistor` in `persistQueryClient` has also been renamed to `Persister`. Checkout [this stackexchange](https://english.stackexchange.com/questions/206893/persister-or-persistor) for the motivation of this change.
 
 Since these plugins are no longer experimental, their import paths have also been updated:
 
@@ -427,7 +427,7 @@ React Query defaults to "tracking" query properties, which should give you a nic
 
 ### Bailing out of updates with setQueryData
 
-When using the [functional updater form of setQueryData](../../../reference/QueryClient.md#queryclientsetquerydata), you can now bail out of the update by returning `undefined`. This is helpful if `undefined` is given to you as `previousValue`, which means that currently, no cached entry exists and you don't want to / cannot create one, like in the example of toggling a todo:
+When using the [functional updater form of setQueryData](../../../../reference/QueryClient.md#queryclientsetquerydata), you can now bail out of the update by returning `undefined`. This is helpful if `undefined` is given to you as `previousValue`, which means that currently, no cached entry exists and you don't want to / cannot create one, like in the example of toggling a todo:
 
 ```tsx
 queryClient.setQueryData(['todo', id], (previousTodo) =>

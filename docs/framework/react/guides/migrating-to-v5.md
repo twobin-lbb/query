@@ -157,7 +157,7 @@ Previously, This function was used to indicate whether to use previous `data` (`
 You can achieve the same functionality by passing a function to `structuralSharing` instead:
 
 ```tsx
- import { replaceEqualDeep } from '@tanstack/react-query'
+import { replaceEqualDeep } from '@tanstack/react-query'
 
 - isDataEqual: (oldData, newData) => customCheck(oldData, newData) // [!code --]
 + structuralSharing: (oldData, newData) => customCheck(oldData, newData) ? oldData : replaceEqualDeep(oldData, newData) // [!code ++]
@@ -218,7 +218,7 @@ useQuery<number, string>({
 })
 ```
 
-For a way to set a different kind of Error globally, see [the TypeScript Guide](../typescript.md#registering-a-global-error).
+For a way to set a different kind of Error globally, see [the TypeScript Guide](../../typescript.md#registering-a-global-error).
 
 ### eslint `prefer-query-object-syntax` rule is removed
 
@@ -498,17 +498,17 @@ Infinite Queries can be prefetched like regular Queries. Per default, only the f
 
 ### New `combine` option for `useQueries`
 
-See the [useQueries docs](../reference/useQueries.md#combine) for more details.
+See the [useQueries docs](../../reference/useQueries.md#combine) for more details.
 
 ### Experimental `fine grained storage persister`
 
-See the [experimental_createPersister docs](../plugins/createPersister.md) for more details.
+See the [experimental_createPersister docs](../../plugins/createPersister.md) for more details.
 
 [//]: # 'FrameworkSpecificNewFeatures'
 
 ### Typesafe way to create Query Options
 
-See the [TypeScript docs](../typescript.md#typing-query-options) for more details.
+See the [TypeScript docs](../../typescript.md#typing-query-options) for more details.
 
 ### new hooks for suspense
 
