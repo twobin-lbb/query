@@ -33,7 +33,7 @@ import fg from 'fast-glob'
 import { readFileSync, writeFileSync } from 'node:fs'
 
 // Define the pattern to match all generated markdown files
-const markdownFilesPattern = 'docs/framework/*/reference/**/*.md'
+const markdownFilesPattern = 'docs/framework/{angular,svelte}/reference/**/*.md'
 
 // Find all markdown files matching the pattern
 const markdownFiles = await fg(markdownFilesPattern)
